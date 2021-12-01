@@ -12,3 +12,16 @@ for row in file:
         datas.append(temp)
 
 print(datas[2][3])
+
+#discretize
+infos = {}
+
+for i in datas:
+    for j in i:
+        if j not in infos:
+            infos[j] = 1
+        else:
+            infos[j] += 1
+
+for i in infos:
+    print(i, infos[i], sep = ": ", end = "\n")
